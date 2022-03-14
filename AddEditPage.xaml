@@ -1,0 +1,33 @@
+﻿<Page x:Class="laba2.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:laba2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="400*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="ID"  ></TextBlock>
+        <TextBlock Text="ФИО" Grid.Row="1"></TextBlock>
+        <TextBlock Text="Позиция" Grid.Row="2"></TextBlock>
+        <TextBlock Text="Звание" Grid.Row="3"></TextBlock>
+        <TextBox x:Name="TbId"  Text="{Binding id}"   Grid.Column="2" />
+        <TextBox  x:Name="TbFIO" Text="{Binding FIO}"   Grid.Row="1"  Grid.Column="2" />
+        <TextBox x:Name="TbPos" Text="{Binding Position}" Grid.Row="2"   Grid.Column="2"  />
+        <TextBox x:Name="TbRank" Text="{Binding Rank}" Grid.Row="3"   Grid.Column="2"  />
+        <Button Content="Сохранить" Name="BtnSave" Click="BtnSave_Click" Grid.Row="4" Grid.ColumnSpan="2"></Button>
+    </Grid>
+</Page>
